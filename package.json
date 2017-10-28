@@ -6,7 +6,8 @@
     "start": "node ./bin/www",
     "startwatch": "nodemon start",
     "server1": "PORT=3001 node ./bin/www",
-    "server2": "PORT=3002 node ./bin/www"
+    "server2": "PORT=3002 node ./bin/www",
+    "postinstall": "bower install"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -16,5 +17,8 @@
     "express": "~4.15.5",
     "morgan": "~1.9.0",
     "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "bower": "^1.8.2"
   }
 }
