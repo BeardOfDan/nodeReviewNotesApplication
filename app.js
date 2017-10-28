@@ -23,10 +23,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/vendor/bootstrap', express.static(
-  path.join(__dirname, 'bower_components', 'bootstrap', 'dist')));
-app.use('/vendor/jquery', express.static(
-  path.join(__dirname, 'bower_components', 'jquery', 'dist')));
+// app.use('/vendor/bootstrap', express.static(
+//   path.join(__dirname, 'bower_components', 'bootstrap', 'dist')));
+// app.use('/vendor/jquery', express.static(
+//   path.join(__dirname, 'bower_components', 'jquery', 'dist')));
+
+app.use('/vendor/bootstrap/css', express.static(path.join(__dirname, 'cyborg')));
+app.use('/vendor/bootstrap/fonts', express.static(path.join(__dirname,
+  'bower_components', 'bootstrap', 'dist', 'fonts')));
+app.use('/vendor/bootstrap/js', express.static(path.join(__dirname,
+  'bower_components', 'bootstrap', 'dist', 'js')));
+app.use('/vendor/jquery', express.static(path.join(__dirname,
+  'bower_components', 'jquery', 'dist')));
 
 app.use('/', index);
 // app.use('/users', users);

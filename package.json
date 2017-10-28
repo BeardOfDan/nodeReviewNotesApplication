@@ -7,7 +7,9 @@
     "startwatch": "nodemon start",
     "server1": "PORT=3001 node ./bin/www",
     "server2": "PORT=3002 node ./bin/www",
-    "postinstall": "bower install"
+    "postinstall": "bower install",
+    "bootstrapsetup": "cd bower_components/bootstrap && npm install && npm install grunt-cli ",
+    "buildbootstrap": "cp variables.less bower_components/bootstrap/less && cd bower_components/bootstrap && grunt"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
